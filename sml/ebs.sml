@@ -1,7 +1,7 @@
 (*
    ebsaux f 1 x n => f x^n
 *)
-fun ebsaux f a b 0 = a
+fun ebsaux f a b 0 = f a
  |  ebsaux f a b n =
     let
        val a' = if n mod 2 = 1 then f (a*b) else f a
