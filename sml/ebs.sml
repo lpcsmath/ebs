@@ -8,7 +8,7 @@ fun ebsaux f a b 0 = f a
        val b' = f (b*b)
        val n' = n div 2
     in
-       (ebsaux f) a' b' n'
+       ebsaux f a' b' n'
     end;
 
 fun id x = x;
