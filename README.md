@@ -3,8 +3,9 @@
 
 ebs provides the following functions
 
-  ebs: IZ x IN -> IZ
-        (x,n) |-> x^n
+>  _ebs: &#x2124; &#xd7; &#x2115; &#x27f6; &#x2124;_
 
-  ebsmod: IZ x IN x IN -> IZ
-           (x,n,m) |-> x^n (mod m)
+>  _ebs(x,n) := x<sup>n</sup>_
+
+>  _ebsmod: &#x2124; &#xd7; &#x2115; &#xd7; &#x2115; &#x27f6; &#x2124;_
+>  _ebsmod(x,n,m) |-> x<sup>n</sup> (_ mod _m)_
