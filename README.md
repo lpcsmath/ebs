@@ -11,6 +11,6 @@
 
 ### ebsmod
 
->  ebsmod : &#x2124; &#xd7; &#x2115; &#xd7; &#x2115; &#x27f6; &#x2124;
+>  ebsmod : &#x2115; &#xd7; &#x2115; &#xd7; &#x2115; &#x27f6; &#x2115;
 >
 >  ebsmod(_x_,_n_,_m_) := _x<sup>n</sup>_ (mod _m_)
