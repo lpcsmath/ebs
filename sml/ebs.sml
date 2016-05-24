@@ -5,7 +5,7 @@ fun ebsaux f a b 0 = f a
  |  ebsaux f a b n =
     let
        val a' = if n mod 2 = 1 then f (a*b) else f a
-       val b' = f (b*b)
+       val b' = if n > 1 then f (b*b) else 0
        val n' = n div 2
     in
        ebsaux f a' b' n'

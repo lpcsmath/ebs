@@ -1,4 +1,4 @@
-name := """minimal-scala"""
+name := """ebs"""
 
 version := "1.0"
 

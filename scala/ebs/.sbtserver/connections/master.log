@@ -1,49 +1,29 @@
-New log file opened at Tue May 24 07:44:29 CEST 2016 by 16817@Lothars-MBP.fritz.box
-Taking next connection to: 54254
-New client attempting to connect on port: 54255-54254
-  Address = /192.168.178.30:54254
-This client on port 54255 has uuid 378a8721-ea9d-4c1c-b4b8-19c017953f16 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
-Connected Clients: activator-378a8721-ea9d-4c1c-b4b8-19c017953f16
-Taking next connection to: 54254
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 54254
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 54254
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 54254
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 54254
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 54254
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 54254
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 54254
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 54254
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 54254
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 54254
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 54254
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 54254
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 54254
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 54254
+New log file opened at Tue May 24 11:43:23 CEST 2016 by 17730@Lothars-MacBook-Pro.fritz.box
+Taking next connection to: 58326
+New client attempting to connect on port: 58327-58326
+  Address = /192.168.178.30:58326
+This client on port 58327 has uuid ce937341-30ca-47ff-9479-9e66c4bd9dfd configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-ce937341-30ca-47ff-9479-9e66c4bd9dfd
+Taking next connection to: 58326
+New client attempting to connect on port: 58328-58326
+  Address = /192.168.178.30:58326
+Handshake exception on socket: 58328
+sbt.impl.ipc.HandshakeException: Unable to perform handshake
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
+	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
+	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:209)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
+	... 2 more
+Taking next connection to: 58326
+New client attempting to connect on port: 58329-58326
+  Address = /192.168.178.30:58326
+This client on port 58329 has uuid dc125504-f0f9-4d13-b391-5b1d6ab51897 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-ce937341-30ca-47ff-9479-9e66c4bd9dfd, activator-dc125504-f0f9-4d13-b391-5b1d6ab51897
+Taking next connection to: 58326
