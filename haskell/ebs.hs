@@ -7,7 +7,8 @@ ebsaux f a b n =
     let
        a' = case mod n 2 of 1 -> f (a*b)
                             _ -> f a
-       b' = f (b*b)
+       b' = case n of 1 -> 0
+                      _ -> f (b*b)
        n' = div n 2
     in
        ebsaux f a' b' n'

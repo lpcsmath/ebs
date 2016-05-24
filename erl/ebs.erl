@@ -10,7 +10,10 @@ ebsaux(F,A,B,N) ->
             1 -> F(A * B);
             _ -> F(A)
          end,
-    B1 = F(B * B),
+    B1 = case N of
+            1 -> 0;
+            _ -> F(B * B)
+         end,
     N1 = N div 2,
     ebsaux(F,A1,B1,N1).
 
