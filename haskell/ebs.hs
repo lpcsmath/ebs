@@ -2,16 +2,14 @@
 -- ebsaux f 1 b n = f b^n
 --
 ebsaux :: (Int -> Int) -> Int -> Int -> Int -> Int
-ebsaux f a b 0 = a
+ebsaux f a b 0 = f a
+ebsaux f a b 1 = f (a*b)
 ebsaux f a b n =
     let
        a' = case mod n 2 of 1 -> f (a*b)
                             _ -> f a
-       b' = case n of 1 -> 0
-                      _ -> f (b*b)
-       n' = div n 2
     in
-       ebsaux f a' b' n'
+       ebsaux f a' (f (b*b)) (div n 2)
 
 --
 -- ebs x n = x^n
