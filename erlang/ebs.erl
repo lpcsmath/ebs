@@ -5,15 +5,13 @@
 %  ebsaux(F,1,X,N) => F(X^N)
 %
 ebsaux(F,A,_,0) -> F(A);
+ebsaux(F,A,B,1) -> F(A * B);
 ebsaux(F,A,B,N) ->
     A1 = case N rem 2 of
             1 -> F(A * B);
             _ -> F(A)
          end,
-    B1 = case N of
-            1 -> 0;
-            _ -> F(B * B)
-         end,
+    B1 = F(B * B),
     N1 = N div 2,
     ebsaux(F,A1,B1,N1).
 
