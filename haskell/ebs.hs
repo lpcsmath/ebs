@@ -1,3 +1,8 @@
+module Ebs (
+    ebs,
+    ebsmod
+) where
+
 --
 -- ebsaux f 1 b n = f b^n
 --
