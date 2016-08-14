@@ -1,25 +1,23 @@
 (*
    ebsaux f 1 x n => f x^n
 *)
-fun ebsaux f a b 0 = f a
- |  ebsaux f a b 1 = f (a*b)
- |  ebsaux f a b n =
-        let
-            val a' = if n mod 2 = 1 then f (a*b) else f a
-        in
-            ebsaux f a' (f (b*b)) (n div 2)
-        end;
+fun ebsaux f x 0 = 1
+ |  ebsaux f x 1 = f x
+ |  ebsaux f x n =
+        if n mod 2 = 0
+        then ebsaux f (f x*x) (n div 2)
+        else f (x * ebsaux f (f x*x) (n div 2))
 
 fun id x = x;
 
 (*
     ebs x n => x^n
 *)
-fun ebs x = ebsaux id 1 x;
+fun ebs x = ebsaux id x;
 
 fun flipmod n a = a mod n;
 
 (*
     ebsmod x n m => x^n (mod m)
 *)
-fun ebsmod x n m = ebsaux (flipmod m) 1 x n;
+fun ebsmod x n m = ebsaux (flipmod m) x n;
