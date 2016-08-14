@@ -1,4 +1,6 @@
-package de.csmath.math;
+package de.csmath.math
+
+import scala.annotation.tailrec
 
 
 object Ebs {
@@ -24,13 +26,14 @@ object Ebs {
     // ebsaux(f,1,x,n) => f(x^n)
     //
     @tailrec
-    private def ebsaux(f: Int => Int, x:Int, n:Int): Int = n match {
-        case 0 => 1
-        case 1 => f(x)
-        case n if n % 2 == 0 =>
-           ebsaux(f, f(x*x), n / 2)
-        case _ =>
-           f(x * ebsaux(f, f(x*x), n / 2))
+    private def ebsaux(f: Int => Int, a: Int, b: Int, n: Int): Int = n match {
+        case 0 => f(a)
+        case x if x >= 0 =>
+            val a1 = if (n % 2 == 1)  f(a*b) else f(a)
+            val b1 = if (n > 1) f(b*b) else 1
+            val n1 = n / 2
+            ebsaux(f, a1, b1, n1)
+        case _ => throw new IllegalArgumentException("n is negative: " + n)
     }
 
 

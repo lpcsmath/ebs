@@ -8,7 +8,7 @@ module Ebs (
 --
 ebsaux :: (Int -> Int) -> Int -> Int -> Int -> Int
 ebsaux f a b 0 = f a
-ebsaux f a b 1 = f (a*b)
+ebsaux f a b 1 = f (a * b)
 ebsaux f a b n =
     let
        a' = case mod n 2 of 1 -> f (a*b)
